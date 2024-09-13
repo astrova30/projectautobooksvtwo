@@ -1,0 +1,123 @@
+.login-container {
+    width: 350px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(83, 53, 28, 0.3); 
+    background-color: #f3e5d0; 
+    text-align: center;
+    position: relative;
+    border: 1px solid hsl(34, 70%, 70%); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-family: oblique bold 100% cursive;
+}
+
+.login-container:hover {
+    box-shadow: 0 0 15px 3px rgba(139, 69, 19, 0.7); 
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #5d4037; 
+    font-size: 28px; 
+    font-weight: 700;
+    font-family: oblique bold 100% cursive;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: oblique bold 100% cursive;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #6d4c41;
+    font-weight: 400;
+    text-align: left;
+    font-size: 14px;
+    font-family: oblique bold 100% cursive;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #a1887f;
+    background-color: #f9f4ef;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: oblique bold 100% cursive;
+}
+
+/* Placeholder de los inputs */
+input::placeholder {
+    font-family: oblique bold 100% cursive; /* Fuente para el placeholder */
+    color: #a1887f; /* Color marrón claro para el placeholder */
+    font-weight: 400;
+}
+
+/* Efecto al enfocar los campos de entrada */
+input:focus {
+    border-color: #8b4513;
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.3);
+}
+
+/* Estilo para el contenedor del enlace de "Olvidaste tu contraseña" */
+.link {
+    margin-top: 15px;
+}
+
+/* Estilo para los enlaces dentro del contenedor */
+.link a {
+    color: #8b5e3c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: oblique bold 100% cursive;
+}
+
+/* Efecto al pasar el ratón sobre el enlace */
+.link a:hover {
+    color: #6e4227;
+    text-decoration: underline;
+}
+
+/* Expande la línea al pasar el ratón */
+.link a:hover::after {
+    width: 75%;
+    text-decoration: none;
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    padding: 12px 20px;
+    background-color: #8b5e3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(83, 53, 28, 0.2);
+    font-family: oblique bold 100% cursive;
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.login-button:hover {
+    background-color: #6e4227;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(83, 53, 28, 0.3);
+}
+
+/* Mensajes de error */
+.error-message {
+    color: #b71c1c;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}

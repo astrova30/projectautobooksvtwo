@@ -1,0 +1,89 @@
+.library-detail-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f7f1e3; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: oblique bold 100% cursive;
+  }
+  
+  .book-cover {
+    flex: 1; /* Proporción flexible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Espacio entre imagen y contenido */
+  }
+  
+  .book-cover img {
+    max-width: 100%;
+    max-height: 400px; /* Aumentar la altura máxima para imágenes más grandes */
+    width: auto; /* Mantener la proporción */
+    height: auto; /* Mantener la proporción */
+    border: 3px solid #8b4513; /* Borde marrón */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Mantener la proporción y cubrir el contenedor */
+  }
+  
+  .book-info {
+    flex: 2; /* Proporción flexible */
+    background-color: #fff8e1; /* Fondo de la información del libro */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0a96d; /* Borde cálido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-info h1 {
+    color: #4b3832; /* Título marrón oscuro */
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .book-info h2 {
+    color: #855e42; /* Autor marrón claro */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .book-info p {
+    color: #6a4e3d; 
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .book-info p strong {
+    color: #8b4513;
+  }
+  
+  .borrow-book-button {
+    background-color: #8b4513; 
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font: oblique bold 100% cursive;
+  }
+  
+  .borrow-book-button:hover {
+    background-color: #a0522d; 
+  }
+  
+  @media (max-width: 768px) {
+    .library-detail-container {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+  
+    .book-cover {
+      margin-bottom: 20px; /* Espacio entre la imagen y el contenido */
+    }
+  }
+  

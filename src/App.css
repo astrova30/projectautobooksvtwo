@@ -35,4 +35,19 @@
   to {
     transform: rotate(360deg);
   }
+  
 }
+
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px;
+  box-shadow: 0 1px 3px -2px black;
+  position: fixed; 
+  width: 100%; 
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+}
+
