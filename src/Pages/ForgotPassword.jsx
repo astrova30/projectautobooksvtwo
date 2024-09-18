@@ -12,7 +12,7 @@ const ForgotPassword = () => {
 
   const fontStyle = { 
     fontFamily: 'Cursive', 
-    fontWeight: 'bold',      //ESTO ES POR SI NO, NOS DA EL ESTILO EN EL CSS
+    fontWeight: 'bold',     
     fontStyle: 'oblique', 
     marginBottom: '10px'  
   };

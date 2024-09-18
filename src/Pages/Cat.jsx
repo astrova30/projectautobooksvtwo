@@ -29,10 +29,10 @@ const Cat = () => {
             <Link to={`/library/${libro.id}`}>
               <img src={libro.cover} alt={libro.title} className="libro-portada" />
               <div className="libro-info">
-                <h2>{libro.title}</h2>
+                <h2>{libro.titulo}</h2>
                 <p>
                   <span className="autor-label">Autor:</span> 
-                  <span className="autor-nombre">{libro.author}</span>
+                  <span className="autor-nombre">{libro.autor}</span>
                 </p>
               </div>
             </Link>

@@ -5,13 +5,13 @@
     align-items: center;
     height: 100vh;
     background-color: #f4f1ea;
-    color: #4a3f35;
+    color: #70b22d;
     font-family: oblique bold 100% cursive;
 }
 
 .spinner {
     border: 8px solid #f3f3f3;
-    border-top: 8px solid #4a3f35;
+    border-top: 8px solid #70b22d;
     border-radius: 50%;
     width: 50px;
     height: 50px;

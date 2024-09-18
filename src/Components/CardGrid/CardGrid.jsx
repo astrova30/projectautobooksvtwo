@@ -9,8 +9,10 @@ const CardGrid = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const cards = [
-    { id: 1, image: image1, title: 'Libros de apoyo investigativo', genre: 'Investigativo' },
-    { id: 2, image: image2, title: 'Libros para tu tiempo libre', genre: 'Ocio' },
+    { id: 1, image: image1, title: 'Apoyo a la investigacion', genre: 'Investigativo' },
+    { id: 2, image: image2, title: 'Libros de ciencia educativa', genre: 'Ciencia' },
+    { id: 3, image: image1, title: 'Libros de apoyo de historia', genre: 'Historia' },
+    { id: 4, image: image2, title: 'Recurso fisicos', genre: 'Recursos' },
   ];
 
   const handleCardClick = (genre) => {

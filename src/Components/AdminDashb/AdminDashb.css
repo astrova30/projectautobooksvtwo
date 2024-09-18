@@ -1,65 +1,176 @@
-
+/* Contenedor Principal del Dashboard */
 .admin-dashb-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-.admin-dashb-container h1 {
+/* Esto es el panel de control */
+.navbar-main {
+    background-color: #ffffff; 
+    color: #2c3e50; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-main h1 {
     font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+}
+
+.navbar-main nav a {
+    color: #2c3e50; 
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.navbar-main nav a:hover {
+    background-color: #ecf0f1; 
+}
+
+
+.navbar {
+    background-color: transparent; 
+    color: #2c3e50; 
+    border-radius: 8px;
+    box-shadow: none; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+.navbar nav a {
+    color: #2c3e50; 
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    padding-right: 40px;
+    
+}
+
+.navbar nav a:hover {
+    background-color: #ecf0f1; 
+}
+
+
+.main-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.summary-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+.summary-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #2c3e50;
+}
 
-.admin-dashb-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
-    font-family: oblique bold 100% cursive;
+.summary-card p {
+    font-size: 24px;
+    color: #36c114;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+.table-container button{
+    font: oblique bold 100% cursive;
+    font-size: 13px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #36c114;
+    padding: 10px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #92c497;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 
-.admin-dashb-container label {
-    font-size: 14px;
+.form-container {
+    margin-top: 20px;
+}
+
+.form-container label {
+    display: block;
     margin-bottom: 5px;
     color: #555;
-    font-family: oblique bold 100% cursive;
 }
 
-.admin-dashb-container input,.admin-dashb-container textarea {
+.form-container input,
+.form-container textarea {
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
-    width: 100%;
-    font-family: oblique bold 100% cursive;
-
-}
-
-
-.admin-dashb-container input,
-.admin-dashb-container textarea {
     margin-bottom: 15px;
+    font-family: oblique bold 100% cursive;
 }
 
-
-.admin-dashb-container button {
-    padding: 10px 10px; 
+.form-container button {
     background-color: #cbaf90;
     color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    align-self: center; 
-    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+    font: oblique bold 100% cursive;
 }
 
-.admin-dashb-container button:hover {
-    background-color: #cbaf90;
+.form-container button:hover {
+    background-color: #92c497;
+
 }

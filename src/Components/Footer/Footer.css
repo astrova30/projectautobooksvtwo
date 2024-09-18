@@ -16,7 +16,7 @@
 
 .footer-logo p {
     color: #383838;
-    font-size: 20px; /* Reduce el tamaño de la fuente */
+    font-size: 28px; /* Reduce el tamaño de la fuente */
     font-weight: 600;
     text-align: center;
     margin: 0;
@@ -27,7 +27,7 @@
     list-style: none;
     gap: 15px; /* Reduce el espacio entre los enlaces */
     color: #252525;
-    font-size: 12px; /* Reduce el tamaño de la fuente */
+    font-size: 15px; /* Reduce el tamaño de la fuente */
     text-align: center;
     padding: 0;
     margin: 2px 0; /* Reduce el margen */
@@ -48,7 +48,7 @@
 .footer-social-icon {
     display: flex;
     gap: 15px; /* Reduce el espacio entre los iconos */
-    margin-top: 5px; /* Ajusta el margen superior */
+    margin-top: 10px; /* Ajusta el margen superior */
 }
 
 .footer-icons-container {
@@ -74,7 +74,7 @@
     width: 100%;
     margin-top: 5px; /* Reduce el margen superior */
     color: #1a1a1a;
-    font-size: 12px; /* Reduce el tamaño de la fuente */
+    font-size: 15px; /* Reduce el tamaño de la fuente */
 }
 
 .footer-copyright hr {

@@ -1,0 +1,91 @@
+.barcode-scanner-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .barcode-scanner-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .barcode-scanner-container form {
+    margin-bottom: 20px;
+  }
+  
+  .barcode-scanner-container label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .barcode-scanner-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .barcode-scanner-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #105613;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: oblique bold 100% cursive;
+  }
+  
+  .barcode-scanner-container button:hover {
+    background-color: #48290c;
+  }
+  
+  .book-info {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .book-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+  }
+  
+  .book-info p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: blue;
+    
+  }
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto; 
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .user-profile-mini {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .user-profile-mini h2 {
+    margin-top: 0;
+  }
+  
+  .user-profile-mini p {
+    margin: 5px 0;
+  }

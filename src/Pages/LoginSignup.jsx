@@ -7,26 +7,29 @@ import { useAuthorization } from '../Context/AuthContext';
 const LoginSignup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useAuthorization(); 
+  const { login } = useAuthorization();  // Función para manejar la sesión
   const [error, setError] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    Axios.get('http://localhost:3000/usuarios')      //Los axios son Axios es una biblioteca diseñada para simplificar una tarea específica en el código JavaScript: realizar solicitudes a URL o líneas HTTP.
+    // Llamar a la API falsa con json-server
+    Axios.get('http://localhost:3000/usuarios') // Obtener los usuarios desde la API falsa
       .then((response) => {   
-        const usuarios = response.data;
-        
+        const usuarios = response.data;  // Extraer los usuarios desde la respuesta
 
+        // Buscar un usuario con el email y la contraseña proporcionados
         const usuarioEncontrado = usuarios.find(
-          (usuario) => usuario.email === email && usuario.password === password
+          (usuario) => usuario.correo === email && usuario.password === password
         );
         
         if (usuarioEncontrado) {
-          login(); 
-          window.location.href = '/'; // Se edirige al usuario a la página principal
+          // Si el usuario es encontrado, iniciar sesión
+          login(usuarioEncontrado.idUsuario); // Actualizar el estado de sesión
+          window.location.href = '/'; // Redirigir a la página principal
         } else {
-          setError('Correo o contraseña incorrectos'); 
+          // Mostrar mensaje de error si no se encuentra el usuario
+          setError('Correo o contraseña incorrectos');
         }
       })
       .catch((error) => {
@@ -35,6 +38,7 @@ const LoginSignup = () => {
       });
   };
 
+  // Estilos reutilizables para input, botones y tipografía
   const fontStyle = { 
     fontFamily: 'Cursive', 
     fontWeight: 'bold', 
@@ -47,14 +51,14 @@ const LoginSignup = () => {
     ...fontStyle, 
     padding: '12px', 
     borderRadius: '8px', 
-    border: '1px solid #a1887f', 
-    backgroundColor: '#f9f4ef',
+    border: '1px solid black', 
+    backgroundColor: 'white',
   };
 
   const buttonStyle = {
     ...fontStyle,
     padding: '12px 20px',
-    backgroundColor: '#8b5e3c',
+    backgroundColor: 'black',
     color: 'white',
     border: 'none',
     borderRadius: '8px',
@@ -65,7 +69,6 @@ const LoginSignup = () => {
   };
 
   const buttonHoverStyle = {
-    ...buttonStyle,
     backgroundColor: '#6e4227',
     transform: 'translateY(-3px)',
     boxShadow: '0 6px 12px rgba(83, 53, 28, 0.3)'
@@ -96,8 +99,8 @@ const LoginSignup = () => {
           type="submit" 
           className="login-button" 
           style={buttonStyle}
-          onMouseOver={(e) => e.currentTarget.style = buttonHoverStyle}
-          onMouseOut={(e) => e.currentTarget.style = buttonStyle}
+          onMouseOver={(e) => Object.assign(e.currentTarget.style, buttonHoverStyle)} // Aplicar estilo de hover
+          onMouseOut={(e) => Object.assign(e.currentTarget.style, buttonStyle)} // Volver al estilo original
         >
           Iniciar Sesión
         </button>

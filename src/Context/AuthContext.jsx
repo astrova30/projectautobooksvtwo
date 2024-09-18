@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
 
-// Se crerea el contexto de autorización
+
 const AuthorizationContext = createContext();
 
-// Proveedor de autorización
+
 export const AuthorizationProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -22,5 +22,5 @@ export const AuthorizationProvider = ({ children }) => {
   );
 };
 
-// Hook personalizado para usar el contexto de autorización
+
 export const useAuthorization = () => useContext(AuthorizationContext);

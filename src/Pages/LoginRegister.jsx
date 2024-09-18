@@ -35,7 +35,7 @@ const LoginRegister = () => {
   const buttonStyle = {
     ...fontStyle,
     padding: '12px 20px',
-    backgroundColor: '#8b5e3c',
+    backgroundColor: 'black',
     color: 'white',
     border: 'none',
     borderRadius: '8px',

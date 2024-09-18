@@ -1,5 +1,6 @@
 .navbar {
-    background-color: #f4f1ea; 
+    backdrop-filter: blur(10px); /* Efecto de desenfoque detrás del navbar */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +24,7 @@
 }
 
 .nav-logo p {
-    color: #4a3f35;
+    color: rgb(0, 0, 0);
     font-size: 28px; 
     font-weight: 700;
     margin: 0;
@@ -48,7 +49,7 @@
 
 .nav-menu li {
     position:relative;
-    color: #4a3f35;
+    color: rgb(0, 0, 0);
     padding:  12px 15px;
     cursor: pointer;
     font-size: 18px;
@@ -60,14 +61,13 @@
 
 }
 
-/* Línea animada debajo de los elementos del menú */
 .nav-menu li::after {
     content: '';
     display: block;
     height: 3px;
     top: 36px;
     width: 0px;
-    background: #8b5e3c; /* Color de la línea */
+    background: rgb(7, 119, 3); /* Color de la línea */
     position: absolute;
     text-decoration: none; /* Esto va sin subrayado */
     transition: width 0.3s ease; /* Transición suave para la línea */
@@ -85,7 +85,7 @@
 .nav-search {
     display: flex;
     gap: 10px;
-    background-color: #fff; /* Fondo blanco para la barra de búsqueda */
+    background-color: #ffffff; /* Fondo blanco para la barra de búsqueda */
     padding: 4px;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -93,7 +93,7 @@
 }
 
 .nav-search input {
-    border: 1px solid #8b5e3c;
+    border: 1px solid white;
     border-radius: 20px;
     font-size: 14px;
     width: 200px; /* Ancho ajustado */
@@ -104,8 +104,8 @@
     padding: 8px 15px;
     border: none;
     border-radius: 20px;
-    background-color: #4a3f35;
-    color: #fff;
+    background-color: black;
+    color: white;
     font-size: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -113,7 +113,7 @@
 }
 
 .nav-search button:hover {
-    background-color: #3b745e;
+    background-color: #3c240a;
 }
 
 .nav-search-icon {
@@ -121,14 +121,14 @@
     align-items: center;
     cursor: pointer;
     font-size: 24px; 
-    color: #4a3f35;
+    color: rgb(0, 0, 0);
     transition: color 0.3s ease;
     margin-left: -50px; 
     margin-right: -70px;
 }
 
 .nav-search-icon:hover {
-    color: #8b5e3c;
+    color: rgb(25, 136, 34);
 }
 
 .nav-buttons {
@@ -143,8 +143,8 @@
     margin-right: 60px;
     border: none;
     border-radius: 20px;
-    background-color: #4a3f35;
-    color: #fff;
+    background-color: black;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -159,7 +159,7 @@
 
 .nav-buttons button:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #8b5e3c;
+    box-shadow: 0 0 0 2px black;
 }
 
 
