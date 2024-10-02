@@ -25,33 +25,12 @@ import BarcodeScanner from './Components/BarcodeScanner';
 
 function App() {
   const [loading, setLoading] = useState(true);
-
-  const [titulo, setTitulo] = useState("");
-  const [autor, setAutor] = useState("");
-  const [editorial, setEditorial] = useState("");
-  const [anioPublicacion, setAnioPublicacion] = useState("");
-  const [nacionalidadAutor, setNacionalidadAutor] = useState("");
-  const [categoria, setCategoria] = useState("");
-  const [sinopsis, setSinopsis] = useState("");
-
-  const add = () => {
-    Axios.post("http://localhost:3001/create", {
-      titulo,
-      autor,
-      editorial,
-      anioPublicacion,
-      categoria: parseInt(categoria),
-      sinopsis,
-    }).then(() => {
-      alert("Libro registrado");
-    });
-  };
+  // Tus estados aquí...
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 900);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -62,22 +41,24 @@ function App() {
       ) : (
         <BrowserRouter>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<><HeroSection /><BookPreview /><CardGrid /></>} />
-            <Route path="/quienes_somos" element={<AboutUs />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/login" element={<LoginSignup />} />
-            <Route path="/register" element={<LoginRegister />} />
-            <Route path="/books" element={<Booklist />} />
-            <Route path="/library/:id" element={<LibraryDetail />} />
-            <Route path="/" element={<Sections />} />
-            <Route path="/investigativo" element={<InvestigativeBooks />} />
-            <Route path="/ocio" element={<LeisureBooks />} />
-            <Route path="/catalogo" element={<Cat />} />
-            <Route path="/admin" element={<AdminDashb />} />
-            <Route path="/inventario" element={<LibraryInvent />} />
-            <Route path="/scanner" element={<BarcodeScanner />} /> 
-          </Routes>
+          <div className="container mt-5">
+            <Routes>
+              <Route path="/" element={<><HeroSection /><BookPreview /><CardGrid /></>} />
+              <Route path="/quienes_somos" element={<AboutUs />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/login" element={<LoginSignup />} />
+              <Route path="/register" element={<LoginRegister />} />
+              <Route path="/books" element={<Booklist />} />
+              <Route path="/library/:id" element={<LibraryDetail />} />
+              <Route path="/" element={<Sections />} />
+              <Route path="/investigativo" element={<InvestigativeBooks />} />
+              <Route path="/ocio" element={<LeisureBooks />} />
+              <Route path="/catalogo" element={<Cat />} />
+              <Route path="/admin" element={<AdminDashb />} />
+              <Route path="/inventario" element={<LibraryInvent />} />
+              <Route path="/scanner" element={<BarcodeScanner />} />
+            </Routes>
+          </div>
           <Footer />
         </BrowserRouter>
       )}

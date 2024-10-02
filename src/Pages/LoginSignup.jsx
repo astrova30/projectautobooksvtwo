@@ -13,7 +13,6 @@ const LoginSignup = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Llamar a la API falsa con json-server
     Axios.get('http://localhost:3000/usuarios') // Obtener los usuarios desde la API falsa
       .then((response) => {   
         const usuarios = response.data;  // Extraer los usuarios desde la respuesta
@@ -75,6 +74,7 @@ const LoginSignup = () => {
   };
 
   return (
+    <div className="login-page">
     <div className="login-container">
       <h2>Iniciar Sesión</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>} {/* Mostrar error si hay */}
@@ -111,6 +111,7 @@ const LoginSignup = () => {
           <Link to="/register">Crear cuenta</Link>
         </div>
       </form>
+    </div>
     </div>
   );
 };

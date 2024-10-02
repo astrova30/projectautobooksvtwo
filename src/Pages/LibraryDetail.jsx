@@ -10,11 +10,10 @@ const LibraryDetail = () => {
   const [requestStatus, setRequestStatus] = useState('');
 
   if (!libro) {
-    return <div>Libro no encontrado</div>;
+    return <div className="not-found">Libro no encontrado</div>;
   }
 
   const handleRequestLoan = () => {
-
     setRequestStatus(`Solicitud de préstamo enviada para el libro: ${libro.titulo}`);
   };
 
@@ -34,7 +33,7 @@ const LibraryDetail = () => {
         <button className="borrow-book-button" onClick={handleRequestLoan}>
           Solicitar Préstamo
         </button>
-        {requestStatus && <p>{requestStatus}</p>}
+        {requestStatus && <p className="request-status">{requestStatus}</p>}
       </div>
     </div>
   );

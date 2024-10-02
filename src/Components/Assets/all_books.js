@@ -162,7 +162,7 @@ const allbooks = [
   autor: 'Héctor Alfonso Ruiz, Plutarco Elías Gil R.',
   editorial: 'Universidad Santo Tomás',
   fechaPublicacion: 1989,
-  ejemplares: 5,
+  ejemplares: 1,
   titulo: 'Matemáticas básicas',
   descripcion: 'Incluye conceptos fundamentales y básicos de matemáticas, con ilustraciones que facilitan el entendimiento. El libro está dirigido a estudiantes de bibliotecas públicas y otras instituciones educativas.',
   serie: 'Ediciones Usta - Lista Básica-Bibliotecas Públicas 1',

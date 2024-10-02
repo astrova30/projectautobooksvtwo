@@ -20,7 +20,7 @@
 }
 
 .nav-logo img {
-    height: 100px; /* Tamaño del logo más pequeño para mayor balance */
+    height: 100px; 
 }
 
 .nav-logo p {
@@ -133,36 +133,32 @@
 
 .nav-buttons {
     display: flex;
-    margin-left: -50px;
-    gap: 20px; 
+    justify-content: flex-start; /* Alinea el botón a la izquierda */
+    margin-left: 20px; /* Ajusta este margen para mover el botón hacia la izquierda */
+    gap: 20px;
 }
 
 .nav-buttons button {
-    padding: 10px 20px;
-    margin-left: 30px;
-    margin-right: 60px;
+    padding: 10px 20px; 
     border: none;
-    border-radius: 20px;
-    background-color: black;
-    color: #ffffff;
+    border-radius: 30px; 
+    background-color: #16ac18; 
+    color: #ffffff; 
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font: oblique bold 100% cursive;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font: oblique bold 100% cursive; 
+    margin-right: 80px; 
 }
-
 .nav-buttons button:hover {
-    background-color: #3b745e;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #5ed845, #457415); 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .nav-buttons button:focus {
     outline: none;
-    box-shadow: 0 0 0 2px black;
+    box-shadow: 0 0 0 2px rgba(241, 101, 8, 0.566); 
 }
 
-
-.nav-search-container .nav-search {
-    display: flex;
-}

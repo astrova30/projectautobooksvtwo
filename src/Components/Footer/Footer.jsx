@@ -52,7 +52,8 @@ const Footer = () => {
       </div>
       <div className='footer-copyright'>
         <hr />
-        <p>Copyright @ 2024 - Todos los derechos reservados.</p>
+        <p>Servicio Nacional de Aprendizaje SENA - Dirección General</p>
+        <p1>Copyright @ 2024 - Todos los derechos reservados. </p1>
       </div>
     </div>
   );
